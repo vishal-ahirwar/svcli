@@ -1,0 +1,19 @@
+CompileFlags:
+  CompilationDatabase: build/default
+
+FallbackFlags:
+  - -std=c++23
+  - -Wall
+  - -Wextra
+  - -O0
+  - -fdiagnostics-color=always
+
+Index:
+  Background: true
+
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add: '*'
+    Remove: '-clang-analyzer-alpha.*'
+
