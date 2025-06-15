@@ -22,7 +22,7 @@ void scanVerilogFiles(std::vector<std::string>& files)
         }
         if (file.path().filename().string().find(".sv") != std::string::npos)
         {
-            files.push_back(file.path().filename());
+            files.push_back(file.path().filename().string());
         }
     }
 };
