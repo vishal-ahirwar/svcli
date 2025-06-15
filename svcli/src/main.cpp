@@ -9,7 +9,6 @@
 #include <string>
 #include <vector>
 
-
 void scanVerilogFiles(std::vector<std::string>& files)
 {
     namespace fs = std::filesystem;
@@ -53,6 +52,15 @@ int  main(int argc, char* argv[])
     std::printf("Copyright %s to %s v%s.\n", std::string(Project::PROJECT_NAME).c_str(),
                 std::string(Project::COMPANY_NAME).c_str(),
                 std::string(Project::VERSION_STRING).c_str());
+
+    if (argc >= 2)
+    {
+        if (std::string(argv[1]) == "--setup")
+        {
+            std::printf("Copying svcli to /usr/bin\n");
+            system("sudo cp svcli /usr/bin/");
+        };
+    }
     std::vector<std::string> files{};
     std::printf("Scanning Files...\n");
     scanVerilogFiles(files);

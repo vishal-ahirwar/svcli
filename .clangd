@@ -15,4 +15,3 @@ Diagnostics:
   UnusedIncludes: Strict
   ClangTidy:
     Add: '*'
-
